@@ -12,3 +12,17 @@ c:\users\dallas lewis\documents\visual studio 2017\Projects\ShapeCanvas\ShapeCan
 c:\users\dallas lewis\documents\visual studio 2017\Projects\ShapeCanvas\ShapeCanvas\obj\Debug\ShapeCanvas.csproj.GenerateResource.Cache
 c:\users\dallas lewis\documents\visual studio 2017\Projects\ShapeCanvas\ShapeCanvas\obj\Debug\ShapeCanvas.exe
 c:\users\dallas lewis\documents\visual studio 2017\Projects\ShapeCanvas\ShapeCanvas\obj\Debug\ShapeCanvas.pdb
+C:\Users\Dallas\Documents\Visual Studio 2017\Projects\ShapeCanvas\ShapeCanvas\bin\Debug\ShapeCanvas.exe.config
+C:\Users\Dallas\Documents\Visual Studio 2017\Projects\ShapeCanvas\ShapeCanvas\bin\Debug\ShapeCanvas.exe
+C:\Users\Dallas\Documents\Visual Studio 2017\Projects\ShapeCanvas\ShapeCanvas\bin\Debug\ShapeCanvas.pdb
+C:\Users\Dallas\Documents\Visual Studio 2017\Projects\ShapeCanvas\ShapeCanvas\obj\Debug\ShapeCanvas.csprojResolveAssemblyReference.cache
+C:\Users\Dallas\Documents\Visual Studio 2017\Projects\ShapeCanvas\ShapeCanvas\obj\Debug\MainWindow.g.cs
+C:\Users\Dallas\Documents\Visual Studio 2017\Projects\ShapeCanvas\ShapeCanvas\obj\Debug\App.g.cs
+C:\Users\Dallas\Documents\Visual Studio 2017\Projects\ShapeCanvas\ShapeCanvas\obj\Debug\ShapeCanvas_MarkupCompile.cache
+C:\Users\Dallas\Documents\Visual Studio 2017\Projects\ShapeCanvas\ShapeCanvas\obj\Debug\ShapeCanvas_MarkupCompile.lref
+C:\Users\Dallas\Documents\Visual Studio 2017\Projects\ShapeCanvas\ShapeCanvas\obj\Debug\MainWindow.baml
+C:\Users\Dallas\Documents\Visual Studio 2017\Projects\ShapeCanvas\ShapeCanvas\obj\Debug\ShapeCanvas.g.resources
+C:\Users\Dallas\Documents\Visual Studio 2017\Projects\ShapeCanvas\ShapeCanvas\obj\Debug\ShapeCanvas.Properties.Resources.resources
+C:\Users\Dallas\Documents\Visual Studio 2017\Projects\ShapeCanvas\ShapeCanvas\obj\Debug\ShapeCanvas.csproj.GenerateResource.Cache
+C:\Users\Dallas\Documents\Visual Studio 2017\Projects\ShapeCanvas\ShapeCanvas\obj\Debug\ShapeCanvas.exe
+C:\Users\Dallas\Documents\Visual Studio 2017\Projects\ShapeCanvas\ShapeCanvas\obj\Debug\ShapeCanvas.pdb

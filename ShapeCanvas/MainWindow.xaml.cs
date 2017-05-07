@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -29,8 +30,7 @@ namespace ShapeCanvas
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            r = null;
-            el = null;
+            DrawCanvas.Children.Clear();
         }
 
         private void Canvas_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -38,25 +38,61 @@ namespace ShapeCanvas
             Point p = System.Windows.Input.Mouse.GetPosition(DrawCanvas);
             Random rand = new Random();
             int randNum = rand.Next(2) + 1;
-            int randNumTemp = 1;
+            int randNumTemp = randNum;
 
             switch (randNumTemp)
             {
                 case 1:
                     r = new Rectangle();
-                    r.Width = rand.Next(200) + 10;
-                    r.Height = rand.Next(200) + 10;
-                    r.Fill = Brushes.Black;
-                    Canvas.SetTop(r, 0);
-                    Canvas.SetLeft(r, 0);
+                    r.Width = rand.Next(80) + 10;
+                    r.Height = rand.Next(80) + 10;
+                    r.Fill = PickRandomBrush();
+                    Canvas.SetTop(r, p.Y - (r.Height/2.0));
+                    Canvas.SetLeft(r, p.X - (r.Width/2.0));
                     DrawCanvas.Children.Add(r);
                     break;
                 case 2:
                     el = new Ellipse();
-                    el.Width = rand.Next(60) + 10;
-                    el.Height = rand.Next(60) + 10;
+                    el.Width = rand.Next(80) + 10;
+                    el.Height = rand.Next(80) + 10;
+                    Canvas.SetTop(el, p.Y - (el.Height / 2.0));
+                    Canvas.SetLeft(el, p.X - (el.Width / 2.0));
+                    el.Fill = PickRandomBrush();
                     DrawCanvas.Children.Add(el);
                     break;
+            }
+        }
+
+        private Brush PickRandomBrush()
+        {
+            Brush result = Brushes.Transparent;
+            Random rnd = new Random();
+            Type brushesType = typeof(Brushes);
+            PropertyInfo[] properties = brushesType.GetProperties();
+            int random = rnd.Next(properties.Length);
+            result = (Brush)properties[random].GetValue(null, null);
+            return result;
+        }
+
+        private void DrawCanvas_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            var canvas = sender as Canvas;
+            RemoveShape(canvas, e.GetPosition(canvas));
+        }
+
+        public static void RemoveShape(Canvas canvas, Point position)
+        {
+            var element = canvas.InputHitTest(position) as UIElement;
+            UIElement parent;
+
+            while (element != null && (parent = VisualTreeHelper.GetParent(element) as UIElement) != canvas)
+            {
+                element = parent;
+            }
+
+            if (element != null)
+            {
+                canvas.Children.Remove(element);
             }
         }
     }

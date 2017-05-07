@@ -13,14 +13,18 @@
         </Grid.ColumnDefinitions>
         <Canvas x:Name="DrawCanvas"
                 Grid.Column="0"
-                MouseLeftButtonDown="Canvas_MouseLeftButtonDown">
-            
+                MouseLeftButtonDown="Canvas_MouseLeftButtonDown"
+                MouseRightButtonDown="DrawCanvas_MouseRightButtonDown">
+                <Canvas.Background>
+                <SolidColorBrush Color ="White" Opacity="0"/>
+                </Canvas.Background>
         </Canvas>
 
         <Grid Grid.Column="1" Background="Gray">
             <Button Width="70"
                     Height="30"
-                Content="Clear">
+                    Content="Clear"
+                    Click="Button_Click">
             </Button>
             
         </Grid>
